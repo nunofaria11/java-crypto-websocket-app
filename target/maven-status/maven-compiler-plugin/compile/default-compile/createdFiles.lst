@@ -1,0 +1,4 @@
+crypto\EncryptedMessage.class
+pt\nuno\webcrypto\WebCryptoSocket.class
+crypto\CryptoUtils.class
+pt\nuno\webcrypto\WebCryptoServlet.class
