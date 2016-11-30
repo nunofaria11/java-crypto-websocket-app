@@ -1,4 +1,4 @@
-package crypto;
+package pt.nuno.crypto;
 
 
 import org.junit.Assert;
@@ -7,7 +7,6 @@ import org.junit.Test;
 import javax.crypto.*;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Base64;
 

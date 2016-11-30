@@ -1,4 +1,4 @@
-package crypto;
+package pt.nuno.crypto;
 
 /**
  * Created by NunoFaria on 29-11-2016.

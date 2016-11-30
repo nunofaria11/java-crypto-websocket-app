@@ -1,4 +1,4 @@
-package crypto;
+package pt.nuno.crypto;
 
 
 import javax.crypto.*;
