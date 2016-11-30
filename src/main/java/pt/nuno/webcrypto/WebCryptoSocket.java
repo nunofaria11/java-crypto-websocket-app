@@ -175,14 +175,18 @@ public class WebCryptoSocket {
                     System.out.println("Decrypt key: " + secretKey);
                     System.out.println("Decrypt key (bytes=" + secretKey.getEncoded().length + "): " + Arrays.toString(secretKey.getEncoded()));
 
-                    // Encrypt test
-                    EncryptedMessage a = CryptoUtils.encrypt(secretKey, "test".getBytes());
-                    String test = new String(CryptoUtils.decrypt(secretKey, a));
-                    System.out.println("Test encrypt/decrypt: " + test);
-
                     byte[] decryptedBytes = CryptoUtils.decrypt(secretKey, encMessage);
                     String decryptedMessage = new String(decryptedBytes);
                     System.out.println("Decrypted message: \"" + decryptedMessage + "\"");
+
+                    // Encrypt test echo
+                    String echoText = "ECHO: <" + decryptedMessage + ">";
+                    EncryptedMessage echoMessage = CryptoUtils.encrypt(secretKey, echoText.getBytes());
+
+                    String echoMessageBase64 = Base64.getEncoder().encodeToString(echoMessage.getData());
+                    String ivBase64 = Base64.getEncoder().encodeToString(echoMessage.getIv());
+                    response.put("message", echoMessageBase64);
+                    response.put("iv", ivBase64);
 
                     response.put("status", 200);
                     break;
