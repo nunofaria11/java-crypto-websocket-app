@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pt.nuno</groupId>
-    <artifactId>pt.nuno.crypto</artifactId>
+    <artifactId>crypto</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -61,7 +61,7 @@
                 <configuration>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webAppConfig>
-                        <contextPath>/pt.nuno.crypto</contextPath>
+                        <contextPath>/crypto</contextPath>
                         <descriptor>${basedir}/src/main/webapp/web.xml</descriptor>
                     </webAppConfig>
                 </configuration>

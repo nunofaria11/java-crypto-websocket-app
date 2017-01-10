@@ -1,1 +1,1 @@
-# java-pt.nuno.crypto-websocket-app
+# crypto-websocket-app
